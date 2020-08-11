@@ -1,0 +1,12 @@
+# Backend Files
+/navdurga_backend/*node_modules
+/navdurga_backend/config.js
+/navdurga_backend/.eslintrc.json
+/navdurga_backend/.prettierrc
+/navdurga_backend/config
+
+
+
+# Frontend Files
+/navdurga_dental/*node_modules
+
