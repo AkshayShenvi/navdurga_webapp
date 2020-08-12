@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require("apollo-server");
 
 module.exports = gql`
   type Details {
@@ -14,7 +14,21 @@ module.exports = gql`
 
     appointments: [Appointments]
   }
+
+  input appointmentInputDetails {
+    f_name: String!
+    l_name: String!
+    s_time: String!
+    e_time: String!
+  }
+
+  type Token {
+    token: String!
+  }
   type Query {
-    get_patient_appointments: [Patient_appointments]
+    get_patient_appointments(s_time: String!,e_time: String!): [Patient_appointments]
+  }
+  type Mutation {
+    addAppointment(appointmentinputs: appointmentInputDetails): Token!
   }
 `;
